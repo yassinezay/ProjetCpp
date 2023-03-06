@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>images/about.png</file>
+        <file>images/about2.png</file>
+        <file>images/actualiser.png</file>
+        <file>images/ajouter.png</file>
+        <file>images/BQCK.png</file>
+        <file>images/check.png</file>
+        <file>images/crayon (1).png</file>
+        <file>images/crayon.png</file>
+        <file>images/cross-small (1).png</file>
+        <file>images/cross-small.png</file>
+        <file>images/fleche-petite-gauche (1).png</file>
+        <file>images/fleche-petite-gauche.png</file>
+        <file>images/historique.png</file>
+        <file>images/home-button (2).png</file>
+        <file>images/interrogatoire.png</file>
+        <file>images/Logo.png</file>
+        <file>images/logout.png</file>
+        <file>images/logout1.png</file>
+        <file>images/logout2.png</file>
+        <file>images/logout4.png</file>
+        <file>images/management (1).png</file>
+        <file>images/message.png</file>
+        <file>images/modifier.png</file>
+        <file>images/poubelle (1).png</file>
+        <file>images/poubelle.png</file>
+        <file>images/pr.png</file>
+        <file>images/profil.png</file>
+        <file>images/rm222batch2-mind-03.png</file>
+        <file>images/sortir.png</file>
+        <file>images/trash.png</file>
+        <file>images/trier.png</file>
+        <file>images/employee.png</file>
+        <file>images/enfant.png</file>
+        <file>images/evenement.png</file>
+        <file>images/partenaire.png</file>
+        <file>images/stock.png</file>
+        <file>images/loupe.png</file>
+    </qresource>
+</RCC>
