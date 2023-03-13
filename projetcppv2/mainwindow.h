@@ -56,6 +56,50 @@ private slots:
 
     void on_modifierp_clicked();
 
+    void on_treeStock_clicked();
+
+    void on_modifierStock_clicked();
+
+    void on_pushButton_valid_11_clicked();
+
+    void on_BRS_clicked();
+
+    void on_btn_quitter_clicked();
+
+    void on_btn_gpartenaire_clicked();
+
+    void on_btn_phistorique_clicked();
+
+    void on_btn_retourp_clicked();
+
+    void on_pushButton_valid_14_clicked();
+
+    void on_pushButton_valid_15_clicked();
+
+    void on_BRp_clicked();
+
+    void on_BRS_2_clicked();
+
+    void on_pushButton_6_clicked();
+
+    void on_pdfS_clicked();
+
+    void on_exitb_clicked();
+
+    void on_aff_clicked();
+
+    void on_tabpartenaire_activated(const QModelIndex &index);
+
+    void on_RECHERCHESp_textChanged(const QString &arg1);
+
+    void on_listView_activated(const QModelIndex &index);
+
+    void on_supphistorique_clicked();
+
+    void on_supphistorique_2_clicked();
+
+    void on_pdfhistorique_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

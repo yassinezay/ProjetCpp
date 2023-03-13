@@ -2,18 +2,19 @@
 #include <QObject>
 #include <QtDebug>
 #include <QMessageBox>
+#include <QDateTime>
 partenaire::partenaire()
 {
 id=0 ;
 nom="-";
 quantite=0;
-type="-";
+type="argent";
 numtel="-";
 somme="-";
 
 }
 
-partenaire::partenaire(int id,QString nom,QString numtel,QString type,int quantite,QString somme,QString Date_convention)
+partenaire::partenaire(int id,QString nom,QString numtel,QString type,int quantite,QString somme,QDateTime Date_convention)
 {
     this->id=id;
     this->nom=nom;
@@ -50,7 +51,7 @@ QSqlQuery query;
 QSqlQueryModel * partenaire::afficher()
 {
 QSqlQueryModel * model= new QSqlQueryModel();
-model->setQuery("SELECT * FROM partenaire");
+model->setQuery("SELECT * FROM partenaire ");
 model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifiant"));
 model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
 model->setHeaderData(2, Qt::Horizontal, QObject::tr("num de telephone"));
@@ -106,7 +107,7 @@ QString date="Date";
 QString id="Nom";
 
 if(type==date){
-    model->setQuery("SELECT * FROM partenaire order by Date_convention DESC ");
+    model->setQuery("SELECT * FROM partenaire order by Date_convention ASC ");
 
     model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifiant"));
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
@@ -117,7 +118,7 @@ if(type==date){
     model->setHeaderData(6, Qt::Horizontal, QObject::tr("date convention"));
 }else
 {
-    model->setQuery("SELECT * FROM partenaire order by id DESC");
+    model->setQuery("SELECT * FROM partenaire order by nom ASC");
     model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifiant"));
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
     model->setHeaderData(2, Qt::Horizontal, QObject::tr("num de telephone"));
@@ -151,4 +152,95 @@ query.bindValue(":id",id_string);
      query.bindValue(":Date_convention", Date_convention );
 
 return    query.exec();
+}
+QSqlQueryModel * partenaire::afficherRSp(QString id)
+{
+    QSqlQuery query;
+
+ QSqlQueryModel * model= new QSqlQueryModel();
+    model->setQuery("SELECT * FROM partenaire WHERE (nom LIKE '%"+id+"%')");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifiant"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("num de telephone"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("type"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("quantite"));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("montant"));
+    model->setHeaderData(6, Qt::Horizontal, QObject::tr("date convention"));
+
+    return model;
+
+}
+bool partenaire::ajouter_historique(QString n,QString nom,int id)
+{
+    QSqlQuery query;
+    QString res= QString::number(id);
+    query.prepare("INSERT INTO history (nom, date_historique, nomp, id) "
+                  "VALUES (:nom, :date_historique, :nomp, :id)");
+    query.bindValue(":nom", n);
+    query.bindValue(":date_historique", QDateTime::currentDateTime());
+        query.bindValue(":nomp", nom);
+            query.bindValue(":id", res);
+
+    return    query.exec();
+}
+QSqlQueryModel * partenaire::afficher_historique0()
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+        model->setQuery("select * FROM history");
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("ID"));
+        model->setHeaderData(3, Qt::Horizontal, QObject::tr("Etat d'historique"));
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("date"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom partenaire"));
+
+
+    return model;
+    }
+
+
+QSqlQueryModel * partenaire::afficher_historique(QString type)
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+     QString a=type;
+     if(a=="tout")
+     {        model->setQuery("select * FROM history");
+         model->setHeaderData(2, Qt::Horizontal, QObject::tr("ID"));
+         model->setHeaderData(3, Qt::Horizontal, QObject::tr("Etat d'historique"));
+         model->setHeaderData(0, Qt::Horizontal, QObject::tr("date"));
+         model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom partenaire"));}
+     else{
+        model->setQuery("select * FROM history  WHERE nom LIKE '%"+a+"%'  ");
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("ID"));
+        model->setHeaderData(3, Qt::Horizontal, QObject::tr("Etat d'historique"));
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("date"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom partenaire"));
+
+}
+    return model;
+}
+
+QSqlQueryModel * partenaire::recherchep2(QString a)
+{
+QSqlQueryModel * model= new QSqlQueryModel();
+    model->setQuery("select * from partenaire WHERE id LIKE '%"+a+"%' OR nom LIKE '%"+a+"%' OR numtel LIKE '%"+a+"%'  OR type LIKE '%"+a+"%' OR date_convention LIKE '%"+a+"%'" );
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifiant"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("num de telephone"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("type"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("quantite"));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("montant"));
+    model->setHeaderData(6, Qt::Horizontal, QObject::tr("date convention"));
+
+
+
+    return model;}
+bool partenaire::supprimerh(int id)
+{
+
+    QSqlQuery query;
+
+         query.prepare("DELETE from history where id=:id ");
+         query.bindValue(":id", id);
+     return     query.exec();
+
 }

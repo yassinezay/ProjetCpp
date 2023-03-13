@@ -36,5 +36,7 @@
         <file>images/evenement.png</file>
         <file>images/partenaire.png</file>
         <file>images/stock.png</file>
+        <file>images/loupe.png</file>
+        <file>images/pdf.png</file>
     </qresource>
 </RCC>
