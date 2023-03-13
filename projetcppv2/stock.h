@@ -8,20 +8,20 @@
 class stock
 {
     QString nom , quantite,type;
-    QDate d;
+    QDateTime d;
     int id;
 public:
     stock();
-    stock(int,QString,QString,QString,QDate);
+    stock(int,QString,QString,QString,QDateTime);
     QString getnom(){return nom;}
     QString gettype(){return type;}
     QString getquantite(){return quantite ;}
     int getid(){return id;}
-    QDate ged(){return d;}
+    QDateTime ged(){return d;}
     void setnom(QString n){nom=n;}
     void setprenom(QString p){quantite=p;}
     void setid(int id){this->id=id;}
-    void setd(QDate d){this->d=d;}
+    void setd(QDateTime d){this->d=d;}
     bool rechercher(int id);
     bool ajouter();
     QSqlQueryModel * afficher();
@@ -31,6 +31,8 @@ public:
    QSqlQueryModel * afficherRS(QString id);
 
     QSqlQueryModel * tri(QString type);
+    QSqlQueryModel * recherches2(QString a);
+
 
 };
 #endif // STOCK_H

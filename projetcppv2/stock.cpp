@@ -11,7 +11,7 @@ quantite="0";
 type=" ";
 }
 
-stock::stock(int id,QString nom,QString prenom,QString type,QDate d)
+stock::stock(int id,QString nom,QString prenom,QString type,QDateTime d)
 {
     this->id=id;
     this->nom=nom;
@@ -46,7 +46,7 @@ model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifiant"));
 model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
 model->setHeaderData(2, Qt::Horizontal, QObject::tr("quantite"));
 model->setHeaderData(3, Qt::Horizontal, QObject::tr("type"));
-model->setHeaderData(3, Qt::Horizontal, QObject::tr("date"));
+model->setHeaderData(4, Qt::Horizontal, QObject::tr("date"));
 
 return model;
 }
@@ -102,7 +102,7 @@ if(type==date){
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
     model->setHeaderData(2, Qt::Horizontal, QObject::tr("quantite"));
     model->setHeaderData(3, Qt::Horizontal, QObject::tr("type"));
-    model->setHeaderData(3, Qt::Horizontal, QObject::tr("date"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("date"));
 }else
 {
     model->setQuery("SELECT * FROM stock order by id DESC");
@@ -110,7 +110,7 @@ if(type==date){
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
     model->setHeaderData(2, Qt::Horizontal, QObject::tr("quantite"));
     model->setHeaderData(3, Qt::Horizontal, QObject::tr("type"));
-    model->setHeaderData(3, Qt::Horizontal, QObject::tr("date"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("date"));
 }
 
 
@@ -146,8 +146,21 @@ QSqlQueryModel * stock::afficherRS(QString id)
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
     model->setHeaderData(2, Qt::Horizontal, QObject::tr("quantite"));
     model->setHeaderData(3, Qt::Horizontal, QObject::tr("type"));
-    model->setHeaderData(3, Qt::Horizontal, QObject::tr("date"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("date"));
 
     return model;
 
 }
+QSqlQueryModel * stock::recherches2(QString a)
+{
+QSqlQueryModel * model= new QSqlQueryModel();
+    model->setQuery("select * from stock WHERE id LIKE '%"+a+"%' OR nom LIKE '%"+a+"%' OR quantite LIKE '%"+a+"%'  OR type LIKE '%"+a+"%' OR dates LIKE '%"+a+"%'" );
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifiant"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("quantite"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("type"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("date"));
+
+
+
+    return model;}

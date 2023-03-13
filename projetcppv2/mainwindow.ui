@@ -144,7 +144,7 @@ QProgressBar::chunk:horizontal {
 }</string>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="page_7">
      <widget class="QStackedWidget" name="stackedWidget_3">
@@ -314,16 +314,6 @@ border-radius:10px;</string>
          <string>Date :</string>
         </property>
        </widget>
-       <widget class="QDateEdit" name="dates">
-        <property name="geometry">
-         <rect>
-          <x>90</x>
-          <y>300</y>
-          <width>131</width>
-          <height>22</height>
-         </rect>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="typestock">
         <property name="geometry">
          <rect>
@@ -435,6 +425,16 @@ border-radius:10px;</string>
         </property>
         <property name="clearButtonEnabled">
          <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QDateTimeEdit" name="dates">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>300</y>
+          <width>121</width>
+          <height>21</height>
+         </rect>
         </property>
        </widget>
       </widget>
@@ -3056,7 +3056,7 @@ background:transparent;</string>
         <x>60</x>
         <y>170</y>
         <width>1071</width>
-        <height>471</height>
+        <height>451</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -3070,8 +3070,8 @@ background-color: transparent;
       <widget class="QPushButton" name="pushButton_3">
        <property name="geometry">
         <rect>
-         <x>890</x>
-         <y>370</y>
+         <x>970</x>
+         <y>380</y>
          <width>75</width>
          <height>23</height>
         </rect>
@@ -3083,9 +3083,9 @@ background-color: transparent;
       <widget class="QTableView" name="TABRECHS">
        <property name="geometry">
         <rect>
-         <x>50</x>
+         <x>30</x>
          <y>40</y>
-         <width>331</width>
+         <width>521</width>
          <height>311</height>
         </rect>
        </property>
@@ -3093,8 +3093,8 @@ background-color: transparent;
       <widget class="QLineEdit" name="lineEdit_2">
        <property name="geometry">
         <rect>
-         <x>570</x>
-         <y>100</y>
+         <x>690</x>
+         <y>110</y>
          <width>113</width>
          <height>20</height>
         </rect>
@@ -3106,8 +3106,8 @@ background-color: transparent;
       <widget class="QPlainTextEdit" name="plainTextEdit">
        <property name="geometry">
         <rect>
-         <x>570</x>
-         <y>140</y>
+         <x>690</x>
+         <y>150</y>
          <width>311</width>
          <height>201</height>
         </rect>
@@ -3136,6 +3136,23 @@ background-color: transparent;
       </property>
       <property name="text">
        <string>envoyer mail</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_retourp_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>630</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+      <property name="icon">
+       <iconset resource="Resources.qrc">
+        <normaloff>:/new/prefix1/images/fleche-petite-gauche (1).png</normaloff>:/new/prefix1/images/fleche-petite-gauche (1).png</iconset>
       </property>
      </widget>
     </widget>

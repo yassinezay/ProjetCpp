@@ -100,6 +100,14 @@ private slots:
 
     void on_pdfhistorique_clicked();
 
+    void on_RECHERCHES_2_textChanged(const QString &arg1);
+
+    void on_tabstock_activated(const QModelIndex &index);
+
+    void on_btn_retourp_2_clicked();
+
+    void on_RECHERCHES_textChanged(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
 };

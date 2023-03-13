@@ -23,6 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tabstock->setModel(e.afficher());
     ui->tabpartenaire->setModel(p.afficher());
     ui->listView->setModel(p.afficher_historique0());
+    ui->TABRECHS->setModel(e.afficher());
 
 
 
@@ -91,7 +92,10 @@ void MainWindow::on_validers_clicked()
     QString nom=ui->nomStock->text();
     QString prenom=ui->quantite->text();
     QString type=ui->typestock->text();
-    QDate date=ui->dates->date();
+    QDateTime date=ui->dates->dateTime();
+    QRegExp regex("^[A-Za-z]+$");
+    QRegExp regex1("^[0-9]+$");
+
 
     stock p(id,nom,prenom,type,date);
     p.setid(ui->id->text().toInt());
@@ -102,21 +106,21 @@ void MainWindow::on_validers_clicked()
                                 "Click Cancel to exit."), QMessageBox::Cancel);
 
     }
-    else if (nom.isEmpty())
+    else if (!regex.exactMatch(nom))
     {
         QMessageBox::critical(nullptr, QObject::tr("probleme nom"),
                     QObject::tr("Il faut ajouter un nom \n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
 
     }
-    else if ( type.isEmpty()  )
+    else if ( !regex.exactMatch(type)  )
     {
         QMessageBox::critical(nullptr, QObject::tr("probleme nom"),
                     QObject::tr("Il faut ajouter un type de stock !! \n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
 
     }
-    else if ( prenom.isEmpty() )
+    else if ( !regex1.exactMatch(prenom) )
     {
         QMessageBox::critical(nullptr, QObject::tr("probleme nom"),
                     QObject::tr("Il faut ajouter le quantite  !! \n"
@@ -182,7 +186,7 @@ void MainWindow::on_modifierStock_clicked()
     QString nom=ui->nomStock->text();
     QString prenom=ui->quantite->text();
     QString type=ui->typestock->text();
-    QDate date=ui->dates->date();
+    QDateTime date=ui->dates->dateTime();
  stock e(id,nom,prenom,type,date);
     e.setid(ui->id->text().toInt());
 
@@ -237,6 +241,7 @@ void MainWindow::on_validpartenaire_clicked()
     QString somme=ui->sommep->text();
     QString numtel=ui->nump->text();
     QRegularExpression regex("^\\+216[0-9]{8}$");
+    QRegExp regex1("^[A-Za-z]+$");
     QDateTime Date_convention = ui->date_partenaire->dateTime();
     if (id < 0 || !id)
     {
@@ -245,7 +250,7 @@ void MainWindow::on_validpartenaire_clicked()
                                 "Click Cancel to exit."), QMessageBox::Cancel);
 
     }
-    else if (nom.isEmpty())
+    else if (!regex1.exactMatch(nom))
     {
         QMessageBox::critical(nullptr, QObject::tr("probleme nom"),
                     QObject::tr("Il faut ajouter un nom \n"
@@ -510,7 +515,7 @@ void MainWindow::on_pdfS_clicked()
         "<body bgcolor=lightblue link=#5000A0>\n"
 
         //     "<align='right'> " << datefich << "</align>"
-        "<center> <H1>Liste Des Partenaires </H1></br></br></tr></tr><table border=1 cellspacing=0 cellpadding=2>\n";
+        "<center> <H1>Liste De stock </H1></br></br></tr></tr><table border=1 cellspacing=0 cellpadding=2>\n";
 
     // headers
     out << "<thead><tr bgcolor=#f0f0f0> <th>Numero</th>";
@@ -607,7 +612,7 @@ void MainWindow::on_tabpartenaire_activated(const QModelIndex &index)
 
         }
         }else
-            int reponse = QMessageBox::question(this, "Interrogatoire", "Erreur", QMessageBox ::Yes );
+             QMessageBox::question(this, "Interrogatoire", "Erreur", QMessageBox ::Yes );
 
 
 }
@@ -634,7 +639,7 @@ while(qry.next())
 
     }
     }else
-        int reponse = QMessageBox::question(this, "Interrogatoire", "Erreur", QMessageBox ::Yes );
+        QMessageBox::question(this, "Interrogatoire", "Erreur", QMessageBox ::Yes );
 
 
 }
@@ -743,4 +748,46 @@ void MainWindow::on_pdfhistorique_clicked()
     doc.setHtml(strStream);
     doc.setPageSize(printer.pageRect().size()); // This is necessary if you want to hide the page number
     doc.print(&printer);
+}
+
+void MainWindow::on_RECHERCHES_2_textChanged(const QString &arg1)
+{
+   stock s;
+       ui->tabstock->setModel(s.recherches2(arg1));
+}
+
+void MainWindow::on_tabstock_activated(const QModelIndex &index)
+{
+    QString val=ui->tabstock->model()->data(index).toString();
+    QSqlQuery qry;
+    qry.prepare("SELECT *from stock where id='"+val+"' ");
+    if (qry.exec())
+    {
+while(qry.next())
+    {
+       ui->id->setText(qry.value(0).toString());
+      ui->nomStock->setText(qry.value(1).toString());
+        ui->typestock->setText(qry.value(2).toString());
+         ui->quantite->setText(qry.value(3).toString());
+         ui->dates->setDate(qry.value(4).toDate());
+         ui->idsupp->setText(qry.value(0).toString());
+
+    }
+    }else
+         QMessageBox::question(this, "Interrogatoire", "Erreur", QMessageBox ::Yes );
+}
+void MainWindow::on_pushButton_valid_13_clicked(){
+
+
+}
+
+void MainWindow::on_btn_retourp_2_clicked()
+{
+    ui->stackedWidgetbar->setCurrentIndex(0);
+}
+
+void MainWindow::on_RECHERCHES_textChanged(const QString &arg1)
+{
+    stock s;
+        ui->TABRECHS->setModel(s.recherches2(arg1));
 }
