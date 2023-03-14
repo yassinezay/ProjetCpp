@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>ajouter.png</file>
+        <file>check.png</file>
+        <file>chercher.png</file>
+        <file>crayon (1).png</file>
+        <file>crayon.png</file>
+        <file>cross-small (1).png</file>
+        <file>cross-small.png</file>
+        <file>fleche-petite-gauche (1).png</file>
+        <file>fleche-petite-gauche.png</file>
+        <file>interrogatoire.png</file>
+        <file>Logo.png</file>
+        <file>poubelle (1).png</file>
+        <file>poubelle.png</file>
+        <file>sortir.png</file>
+        <file>trash.png</file>
+        <file>rm222batch2-mind-03.png</file>
+        <file>332757247_1267569733828152_141609241982790172_n.png</file>
+        <file>telecharger.png</file>
+        <file>maison.png</file>
+        <file>reglages.png</file>
+        <file>actualiser.png</file>
+    </qresource>
+</RCC>

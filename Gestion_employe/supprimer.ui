@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>supprimer</class>
+ <widget class="QDialog" name="supprimer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>561</width>
+    <height>413</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/****************Buttons**********************/
+QPushButton{
+	color: rgb(25, 139, 186);
+	border-radius:10px;
+	background-color: rgb(255, 255, 255);
+	 border-width: 2px;
+	font: 75 10pt &quot;Times New Roman&quot;;
+	border:1px solid rgb(209, 209, 209);
+
+}
+
+
+QPushButton:hover {
+	border:1px solid rgb(25, 139, 186);
+}
+
+QPushButton:pressed {
+	color: rgb(255, 255, 255);
+	background-color: rgb(20, 175, 218);
+
+}
+
+QPushButton:checked{
+    border-color: #6A6969;
+	background-color: rgb(20, 175, 218);
+}
+/****************Frame********************/
+QFrame{
+	background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+
+}
+
+/****************QDialog********************/
+QDialog{
+	background-color: rgb(25, 139, 186);
+}
+
+
+/****************QLabel********************/
+QLabel{
+    border: 1px solid transparent ;
+	color: rgb(20, 72, 149);
+}
+/****************QLineEdit********************/
+QLineEdit{
+	border-radius:10px;
+	border:1px solid  #D1D1D1;
+color: rgb(20, 72, 149);
+
+}
+/****************QGroupBox********************/
+QGroupBox{
+background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+}
+/*****************QStackedWidget*******************/
+QStackedWidget{
+	background-color: rgb(25, 139, 186);
+}
+
+/*****************Progress bar*******************/
+QProgressBar:horizontal {
+
+    border-radius: 6px;
+    border: 1px solid #3A3939;
+    text-align: center;
+    padding: 1px;
+	background-color: rgb(209, 209, 209);
+}
+
+QProgressBar::chunk:horizontal {
+    border-radius: 6px;
+	background-color: rgb(142, 191, 46);
+}
+
+
+
+
+
+
+</string>
+  </property>
+ </widget>
+ <resources>
+  <include location="Images.qrc"/>
+ </resources>
+ <connections/>
+</ui>

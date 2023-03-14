@@ -1,0 +1,2246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1330</width>
+    <height>759</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QComboBox{
+border-radius: 10px;
+    border: 1px solid transparent;
+	color: rgb(25, 139, 186);
+}
+QDateEdit{
+border-radius: 10px;
+    border: 1px solid transparent;
+	color: rgb(25, 139, 186);
+
+}
+QCheckBox{
+  spacing: 5px;
+
+    outline: none;
+
+   
+
+    margin-bottom: 2px;
+	color: rgb(20, 72, 149);
+}
+QCheckBox::indicator{
+border-radius: 10px;
+    border: 1px solid #D1D1D1;
+}
+QSpinBox{
+	color: rgb(20, 72, 149);
+}
+/****************Buttons**********************/
+QPushButton{
+	color: rgb(25, 139, 186);
+	border-radius:10px;
+	background-color: rgb(255, 255, 255);
+	 border-width: 2px;
+	font: 75 10pt &quot;Times New Roman&quot;;
+	border:1px solid rgb(209, 209, 209);
+
+}
+
+
+QPushButton:hover {
+	border:1px solid rgb(25, 139, 186);
+}
+
+QPushButton:pressed {
+	color: rgb(255, 255, 255);
+	background-color: rgb(20, 175, 218);
+
+}
+
+QPushButton:checked{
+    border-color: #6A6969;
+	background-color: rgb(20, 175, 218);
+}
+/****************Frame********************/
+QFrame{
+	background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+
+}
+
+/****************QDialog********************/
+QDialog{
+	background-color: rgb(25, 139, 186);
+
+}
+
+
+/****************QLabel********************/
+QLabel{
+    border: 1px solid transparent ;
+	color: rgb(20, 72, 149);
+}
+/****************QLineEdit********************/
+QLineEdit{
+
+	border-radius:10px;
+	border:1px solid;
+	border-color: rgb(209, 209, 209);
+color: rgb(20, 72, 149);
+
+}
+/****************QGroupBox********************/
+QGroupBox{
+background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+}
+/*****************QStackedWidget*******************/
+
+
+QStackedWidget{
+background-color:transparent;
+border:transparent;
+}
+
+QMainWindow{
+	background-image: url(:/new/prefix1/332757247_1267569733828152_141609241982790172_n.png);
+background-repeat: no-repeat;
+
+}
+
+/*****************Progress bar*******************/
+QProgressBar:horizontal {
+
+    border-radius: 6px;
+    border: 1px solid #3A3939;
+    text-align: center;
+    padding: 1px;
+	background-color: rgb(209, 209, 209);
+}
+
+QProgressBar::chunk:horizontal {
+    border-radius: 6px;
+	background-color: rgb(142, 191, 46);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>-20</x>
+      <y>70</y>
+      <width>1251</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhNone</set>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QStackedWidget" name="Ajouter">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>29</y>
+        <width>381</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page_3">
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>60</y>
+          <width>371</width>
+          <height>341</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>10</pointsize>
+          <weight>9</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+/****************Buttons**********************/
+QPushButton{
+	color: rgb(25, 139, 186);
+	border-radius:10px;
+	background-color: rgb(255, 255, 255);
+	 border-width: 2px;
+	font: 75 10pt &quot;Times New Roman&quot;;
+	border:1px solid rgb(209, 209, 209);
+}
+
+
+QPushButton:hover {
+	border:1px solid rgb(25, 139, 186);
+}
+
+QPushButton:pressed {
+	color: rgb(255, 255, 255);
+	background-color: rgb(20, 175, 218);
+
+}
+
+QPushButton:checked{
+    border-color: #6A6969;
+	background-color: rgb(20, 175, 218);
+}
+/****************Frame********************/
+QFrame{
+	background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+
+}
+
+/****************QDialog********************/
+QDialog{
+	background-color: rgb(25, 139, 186);
+}
+
+
+/****************QLabel********************/
+QLabel{
+    border: 1px solid transparent ;
+	color: rgb(20, 72, 149);
+}
+/****************QLineEdit********************/
+QLineEdit{
+	border-radius:10px;
+	border:1px solid  #D1D1D1;
+color: rgb(20, 72, 149);
+
+}
+/****************QGroupBox********************/
+QGroupBox{
+background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+}
+/*****************QStackedWidget*******************/
+QWidget{
+}
+/*****************Progress bar*******************/
+QProgressBar:horizontal {
+
+    border-radius: 6px;
+    border: 1px solid #3A3939;
+    text-align: center;
+    padding: 1px;
+	background-color: rgb(209, 209, 209);
+}
+
+QProgressBar::chunk:horizontal {
+    border-radius: 6px;
+	background-color: rgb(142, 191, 46);
+}
+
+
+
+
+
+
+</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>140</y>
+           <width>101</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="whatsThis">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>       Nom</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>200</y>
+           <width>101</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>     Prenom </string>
+         </property>
+         <property name="margin">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="nom">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>140</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="readOnly">
+          <bool>false</bool>
+         </property>
+         <property name="placeholderText">
+          <string>Nom</string>
+         </property>
+         <property name="clearButtonEnabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="prenom">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>200</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="inputMask">
+          <string/>
+         </property>
+         <property name="readOnly">
+          <bool>false</bool>
+         </property>
+         <property name="placeholderText">
+          <string>Prenom</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="modif_2">
+         <property name="geometry">
+          <rect>
+           <x>230</x>
+           <y>280</y>
+           <width>121</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Continuer</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Images.qrc">
+           <normaloff>:/new/prefix1/check.png</normaloff>:/new/prefix1/check.png</iconset>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="ID">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>80</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="readOnly">
+          <bool>false</bool>
+         </property>
+         <property name="placeholderText">
+          <string>ID</string>
+         </property>
+         <property name="clearButtonEnabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>80</y>
+           <width>101</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="whatsThis">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>          ID</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="label_14">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>201</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(25, 139, 186);
+color: white;
+font: 75 12pt &quot;Times New Roman&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Ajouter un employé</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_4">
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>60</y>
+          <width>371</width>
+          <height>341</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>10</pointsize>
+          <weight>9</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+/****************Buttons**********************/
+QPushButton{
+	color: rgb(25, 139, 186);
+	border-radius:10px;
+	background-color: rgb(255, 255, 255);
+	 border-width: 2px;
+	font: 75 10pt &quot;Times New Roman&quot;;
+	border:1px solid rgb(209, 209, 209);
+}
+
+
+QPushButton:hover {
+	border:1px solid rgb(25, 139, 186);
+}
+
+QPushButton:pressed {
+	color: rgb(255, 255, 255);
+	background-color: rgb(20, 175, 218);
+
+}
+
+QPushButton:checked{
+    border-color: #6A6969;
+	background-color: rgb(20, 175, 218);
+}
+/****************Frame********************/
+QFrame{
+	background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+
+}
+
+/****************QDialog********************/
+QDialog{
+	background-color: rgb(25, 139, 186);
+}
+
+
+/****************QLabel********************/
+QLabel{
+    border: 1px solid transparent ;
+	color: rgb(20, 72, 149);
+}
+/****************QLineEdit********************/
+QLineEdit{
+	border-radius:10px;
+	border:1px solid  #D1D1D1;
+color: rgb(20, 72, 149);
+
+}
+/****************QGroupBox********************/
+QGroupBox{
+background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+}
+/*****************QStackedWidget*******************/
+QWidget{
+
+}
+/*****************Progress bar*******************/
+QProgressBar:horizontal {
+
+    border-radius: 6px;
+    border: 1px solid #3A3939;
+    text-align: center;
+    padding: 1px;
+	background-color: rgb(209, 209, 209);
+}
+
+QProgressBar::chunk:horizontal {
+    border-radius: 6px;
+	background-color: rgb(142, 191, 46);
+}
+
+
+
+
+
+
+</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QPushButton" name="modif_3">
+         <property name="geometry">
+          <rect>
+           <x>230</x>
+           <y>280</y>
+           <width>121</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Ajouter</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Images.qrc">
+           <normaloff>:/new/prefix1/ajouter.png</normaloff>:/new/prefix1/ajouter.png</iconset>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="desi">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>120</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="readOnly">
+          <bool>false</bool>
+         </property>
+         <property name="placeholderText">
+          <string>Designation</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="adresse">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>190</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="readOnly">
+          <bool>false</bool>
+         </property>
+         <property name="placeholderText">
+          <string>Adresse</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_11">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>190</y>
+           <width>101</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Times New Roman</family>
+           <pointsize>10</pointsize>
+           <weight>9</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>     Adresse</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_12">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>120</y>
+           <width>101</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Times New Roman</family>
+           <pointsize>10</pointsize>
+           <weight>9</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>   Designation</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="modif_4">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>280</y>
+           <width>121</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Annuler</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Images.qrc">
+           <normaloff>:/new/prefix1/cross-small.png</normaloff>:/new/prefix1/cross-small.png</iconset>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="cin">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>50</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="placeholderText">
+          <string>CIN</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_10">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>50</y>
+           <width>101</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>        CIN  </string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="label_13">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>201</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(25, 139, 186);
+color: rgb(255, 255, 255);
+font: 75 12pt &quot;Times New Roman&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Ajouter un employé</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_6">
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>371</width>
+          <height>531</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>10</pointsize>
+          <weight>9</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+/****************Buttons**********************/
+QPushButton{
+	color: rgb(25, 139, 186);
+	border-radius:10px;
+	background-color: rgb(255, 255, 255);
+	 border-width: 2px;
+	font: 75 10pt &quot;Times New Roman&quot;;
+	border:1px solid rgb(209, 209, 209);
+}
+
+
+QPushButton:hover {
+	border:1px solid rgb(25, 139, 186);
+}
+
+QPushButton:pressed {
+	color: rgb(255, 255, 255);
+	background-color: rgb(20, 175, 218);
+
+}
+
+QPushButton:checked{
+    border-color: #6A6969;
+	background-color: rgb(20, 175, 218);
+}
+/****************Frame********************/
+QFrame{
+	background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+
+}
+
+/****************QDialog********************/
+QDialog{
+	background-color: rgb(25, 139, 186);
+}
+
+
+/****************QLabel********************/
+QLabel{
+    border: 1px solid transparent ;
+	color: rgb(20, 72, 149);
+}
+/****************QLineEdit********************/
+QLineEdit{
+	border-radius:10px;
+	border:1px solid  #D1D1D1;
+color: rgb(20, 72, 149);
+
+}
+/****************QGroupBox********************/
+QGroupBox{
+background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+}
+/*****************QStackedWidget*******************/
+QWidget{
+}
+/*****************Progress bar*******************/
+QProgressBar:horizontal {
+
+    border-radius: 6px;
+    border: 1px solid #3A3939;
+    text-align: center;
+    padding: 1px;
+	background-color: rgb(209, 209, 209);
+}
+
+QProgressBar::chunk:horizontal {
+    border-radius: 6px;
+	background-color: rgb(142, 191, 46);
+}
+
+
+
+
+
+
+</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>130</y>
+           <width>101</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="whatsThis">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>       Nom</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>190</y>
+           <width>101</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>     Prenom </string>
+         </property>
+         <property name="margin">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="nom_2">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>130</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="readOnly">
+          <bool>false</bool>
+         </property>
+         <property name="placeholderText">
+          <string>Nom</string>
+         </property>
+         <property name="clearButtonEnabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="prenom_2">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>190</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="inputMask">
+          <string/>
+         </property>
+         <property name="readOnly">
+          <bool>false</bool>
+         </property>
+         <property name="placeholderText">
+          <string>Prenom</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="ID_2">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>70</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="readOnly">
+          <bool>false</bool>
+         </property>
+         <property name="placeholderText">
+          <string>ID</string>
+         </property>
+         <property name="clearButtonEnabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_8">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>70</y>
+           <width>101</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="whatsThis">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>          ID</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_22">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>380</y>
+           <width>101</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Times New Roman</family>
+           <pointsize>10</pointsize>
+           <weight>9</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>     Adresse</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_24">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>260</y>
+           <width>101</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>        CIN  </string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="cin_2">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>260</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="placeholderText">
+          <string>CIN</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="desi_2">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>320</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="readOnly">
+          <bool>false</bool>
+         </property>
+         <property name="placeholderText">
+          <string>Designation</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="adresse_2">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>380</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="readOnly">
+          <bool>false</bool>
+         </property>
+         <property name="placeholderText">
+          <string>Adresse</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_23">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>320</y>
+           <width>101</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Times New Roman</family>
+           <pointsize>10</pointsize>
+           <weight>9</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>   Designation</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_8">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>470</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+/****************Buttons**********************/
+QPushButton{
+	color: rgb(25, 139, 186);
+	border-radius:10px;
+	background-color: rgb(255, 255, 255);
+	 border-width: 2px;
+	font: 75 10pt &quot;Times New Roman&quot;;
+	border:1px solid rgb(209, 209, 209);
+}
+
+
+QPushButton:hover {
+	border:1px solid rgb(25, 139, 186);
+}
+
+QPushButton:pressed {
+	color: rgb(255, 255, 255);
+	background-color: rgb(20, 175, 218);
+
+}
+
+QPushButton:checked{
+    border-color: #6A6969;
+	background-color: rgb(20, 175, 218);
+}
+/****************Frame********************/
+QFrame{
+	background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+
+}
+
+/****************QDialog********************/
+QDialog{
+	background-color: rgb(25, 139, 186);
+}
+
+
+/****************QLabel********************/
+QLabel{
+    border: 1px solid transparent ;
+	color: rgb(20, 72, 149);
+}
+/****************QLineEdit********************/
+QLineEdit{
+	border-radius:10px;
+	border:1px solid  #D1D1D1;
+color: rgb(20, 72, 149);
+
+}
+/****************QGroupBox********************/
+QGroupBox{
+background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+}
+/*****************QStackedWidget*******************/
+QWidget{
+
+}
+/*****************Progress bar*******************/
+QProgressBar:horizontal {
+
+    border-radius: 6px;
+    border: 1px solid #3A3939;
+    text-align: center;
+    padding: 1px;
+	background-color: rgb(209, 209, 209);
+}
+
+QProgressBar::chunk:horizontal {
+    border-radius: 6px;
+	background-color: rgb(142, 191, 46);
+}
+
+
+
+
+
+
+</string>
+         </property>
+         <property name="inputMethodHints">
+          <set>Qt::ImhNone</set>
+         </property>
+         <property name="text">
+          <string>Modifier</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Images.qrc">
+           <normaloff>:/new/prefix1/crayon.png</normaloff>:/new/prefix1/crayon.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="modif_8">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>470</y>
+           <width>111</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Ajouter </string>
+         </property>
+         <property name="icon">
+          <iconset resource="Images.qrc">
+           <normaloff>:/new/prefix1/ajouter.png</normaloff>:/new/prefix1/ajouter.png</iconset>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="label_15">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>201</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(25, 139, 186);
+color: white;
+font: 75 12pt &quot;Times New Roman&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Modifier un employé</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>50</y>
+        <width>521</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+/****************Buttons**********************/
+QPushButton{
+	color: rgb(25, 139, 186);
+	border-radius:10px;
+	background-color: rgb(255, 255, 255);
+	 border-width: 2px;
+	font: 75 10pt &quot;Times New Roman&quot;;
+	border:1px solid rgb(209, 209, 209);
+}
+
+
+QPushButton:hover {
+	border:1px solid rgb(25, 139, 186);
+}
+
+QPushButton:pressed {
+	color: rgb(255, 255, 255);
+	background-color: rgb(20, 175, 218);
+
+}
+
+QPushButton:checked{
+    border-color: #6A6969;
+	background-color: rgb(20, 175, 218);
+}
+/****************Frame********************/
+QFrame{
+	background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+
+}
+
+/****************QDialog********************/
+QDialog{
+	background-color: rgb(25, 139, 186);
+}
+
+
+/****************QLabel********************/
+QLabel{
+    border: 1px solid transparent ;
+	color: rgb(20, 72, 149);
+}
+/****************QLineEdit********************/
+QLineEdit{
+	border-radius:10px;
+	border:1px solid  #D1D1D1;
+color: rgb(20, 72, 149);
+
+}
+/****************QGroupBox********************/
+QGroupBox{
+background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+}
+/*****************QStackedWidget*******************/
+QWidget{
+
+}
+/*****************Progress bar*******************/
+QProgressBar:horizontal {
+
+    border-radius: 6px;
+    border: 1px solid #3A3939;
+    text-align: center;
+    padding: 1px;
+	background-color: rgb(209, 209, 209);
+}
+
+QProgressBar::chunk:horizontal {
+    border-radius: 6px;
+	background-color: rgb(142, 191, 46);
+}
+
+
+
+
+
+
+</string>
+      </property>
+      <property name="placeholderText">
+       <string>Recherche</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="tableemploye">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>90</y>
+        <width>591</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+/****************Buttons**********************/
+QPushButton{
+	color: rgb(25, 139, 186);
+	border-radius:10px;
+	background-color: rgb(255, 255, 255);
+	 border-width: 2px;
+	font: 75 10pt &quot;Times New Roman&quot;;
+	border:1px solid rgb(209, 209, 209);
+}
+
+
+QPushButton:hover {
+	border:1px solid rgb(25, 139, 186);
+}
+
+QPushButton:pressed {
+	color: rgb(255, 255, 255);
+	background-color: rgb(20, 175, 218);
+
+}
+
+QPushButton:checked{
+    border-color: #6A6969;
+	background-color: rgb(20, 175, 218);
+}
+/****************Frame********************/
+QFrame{
+	background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+
+}
+
+/****************QDialog********************/
+QDialog{
+	background-color: rgb(25, 139, 186);
+}
+
+
+/****************QLabel********************/
+QLabel{
+    border: 1px solid transparent ;
+	color: rgb(20, 72, 149);
+}
+/****************QLineEdit********************/
+QLineEdit{
+	border-radius:10px;
+	border:1px solid  #D1D1D1;
+color: rgb(20, 72, 149);
+
+}
+/****************QGroupBox********************/
+QGroupBox{
+background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+}
+/*****************QStackedWidget*******************/
+QWidget{
+
+}
+/*****************Progress bar*******************/
+QProgressBar:horizontal {
+
+    border-radius: 6px;
+    border: 1px solid #3A3939;
+    text-align: center;
+    padding: 1px;
+	background-color: rgb(209, 209, 209);
+}
+
+QProgressBar::chunk:horizontal {
+    border-radius: 6px;
+	background-color: rgb(142, 191, 46);
+}
+
+
+
+
+
+
+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>1040</x>
+        <y>50</y>
+        <width>51</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="Images.qrc">
+        <normaloff>:/new/prefix1/chercher.png</normaloff>:/new/prefix1/chercher.png</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="geometry">
+       <rect>
+        <x>1110</x>
+        <y>250</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+/****************Buttons**********************/
+QPushButton{
+	color: rgb(25, 139, 186);
+	border-radius:10px;
+	background-color: rgb(255, 255, 255);
+	 border-width: 2px;
+	font: 75 10pt &quot;Times New Roman&quot;;
+	border:1px solid rgb(209, 209, 209);
+}
+
+
+QPushButton:hover {
+	border:1px solid rgb(25, 139, 186);
+}
+
+QPushButton:pressed {
+	color: rgb(255, 255, 255);
+	background-color: rgb(20, 175, 218);
+
+}
+
+QPushButton:checked{
+    border-color: #6A6969;
+	background-color: rgb(20, 175, 218);
+}
+/****************Frame********************/
+QFrame{
+	background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+
+}
+
+/****************QDialog********************/
+QDialog{
+	background-color: rgb(25, 139, 186);
+}
+
+
+/****************QLabel********************/
+QLabel{
+    border: 1px solid transparent ;
+	color: rgb(20, 72, 149);
+}
+/****************QLineEdit********************/
+QLineEdit{
+	border-radius:10px;
+	border:1px solid  #D1D1D1;
+color: rgb(20, 72, 149);
+
+}
+/****************QGroupBox********************/
+QGroupBox{
+background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+}
+/*****************QStackedWidget*******************/
+QWidget{
+
+}
+/*****************Progress bar*******************/
+QProgressBar:horizontal {
+
+    border-radius: 6px;
+    border: 1px solid #3A3939;
+    text-align: center;
+    padding: 1px;
+	background-color: rgb(209, 209, 209);
+}
+
+QProgressBar::chunk:horizontal {
+    border-radius: 6px;
+	background-color: rgb(142, 191, 46);
+}
+
+
+
+
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>Trier </string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>1110</x>
+        <y>200</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+/****************Buttons**********************/
+QPushButton{
+	color: rgb(25, 139, 186);
+	border-radius:10px;
+	background-color: rgb(255, 255, 255);
+	 border-width: 2px;
+	font: 75 10pt &quot;Times New Roman&quot;;
+	border:1px solid rgb(209, 209, 209);
+}
+
+
+QPushButton:hover {
+	border:1px solid rgb(25, 139, 186);
+}
+
+QPushButton:pressed {
+	color: rgb(255, 255, 255);
+	background-color: rgb(20, 175, 218);
+
+}
+
+QPushButton:checked{
+    border-color: #6A6969;
+	background-color: rgb(20, 175, 218);
+}
+/****************Frame********************/
+QFrame{
+	background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+
+}
+
+/****************QDialog********************/
+QDialog{
+	background-color: rgb(25, 139, 186);
+}
+
+
+/****************QLabel********************/
+QLabel{
+    border: 1px solid transparent ;
+	color: rgb(20, 72, 149);
+}
+/****************QLineEdit********************/
+QLineEdit{
+	border-radius:10px;
+	border:1px solid  #D1D1D1;
+color: rgb(20, 72, 149);
+
+}
+/****************QGroupBox********************/
+QGroupBox{
+background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+}
+/*****************QStackedWidget*******************/
+QWidget{
+
+}
+/*****************Progress bar*******************/
+QProgressBar:horizontal {
+
+    border-radius: 6px;
+    border: 1px solid #3A3939;
+    text-align: center;
+    padding: 1px;
+	background-color: rgb(209, 209, 209);
+}
+
+QProgressBar::chunk:horizontal {
+    border-radius: 6px;
+	background-color: rgb(142, 191, 46);
+}
+
+
+
+
+
+
+</string>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="text">
+       <string>PDF</string>
+      </property>
+      <property name="icon">
+       <iconset resource="Images.qrc">
+        <normaloff>:/new/prefix1/telecharger.png</normaloff>:/new/prefix1/telecharger.png</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="geometry">
+       <rect>
+        <x>1110</x>
+        <y>100</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+/****************Buttons**********************/
+QPushButton{
+	color: rgb(25, 139, 186);
+	border-radius:10px;
+	background-color: rgb(255, 255, 255);
+	 border-width: 2px;
+	font: 75 10pt &quot;Times New Roman&quot;;
+	border:1px solid rgb(209, 209, 209);
+}
+
+
+QPushButton:hover {
+	border:1px solid rgb(25, 139, 186);
+}
+
+QPushButton:pressed {
+	color: rgb(255, 255, 255);
+	background-color: rgb(20, 175, 218);
+
+}
+
+QPushButton:checked{
+    border-color: #6A6969;
+	background-color: rgb(20, 175, 218);
+}
+/****************Frame********************/
+QFrame{
+	background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+
+}
+
+/****************QDialog********************/
+QDialog{
+	background-color: rgb(25, 139, 186);
+}
+
+
+/****************QLabel********************/
+QLabel{
+    border: 1px solid transparent ;
+	color: rgb(20, 72, 149);
+}
+/****************QLineEdit********************/
+QLineEdit{
+	border-radius:10px;
+	border:1px solid  #D1D1D1;
+color: rgb(20, 72, 149);
+
+}
+/****************QGroupBox********************/
+QGroupBox{
+background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+}
+/*****************QStackedWidget*******************/
+QWidget{
+
+}
+/*****************Progress bar*******************/
+QProgressBar:horizontal {
+
+    border-radius: 6px;
+    border: 1px solid #3A3939;
+    text-align: center;
+    padding: 1px;
+	background-color: rgb(209, 209, 209);
+}
+
+QProgressBar::chunk:horizontal {
+    border-radius: 6px;
+	background-color: rgb(142, 191, 46);
+}
+
+
+
+
+
+
+</string>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="text">
+       <string>Actualiser</string>
+      </property>
+      <property name="icon">
+       <iconset resource="Images.qrc">
+        <normaloff>:/new/prefix1/actualiser.png</normaloff>:/new/prefix1/actualiser.png</iconset>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>440</y>
+        <width>201</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>20</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>51</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>85</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string>Supprimer</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+/****************Buttons**********************/
+QPushButton{
+	color: rgb(25, 139, 186);
+	border-radius:10px;
+	background-color: rgb(255, 255, 255);
+	 border-width: 2px;
+	font: 75 10pt &quot;Times New Roman&quot;;
+	border:1px solid rgb(209, 209, 209);
+}
+
+
+QPushButton:hover {
+	border:1px solid rgb(25, 139, 186);
+}
+
+QPushButton:pressed {
+	color: rgb(255, 255, 255);
+	background-color: rgb(20, 175, 218);
+
+}
+
+QPushButton:checked{
+    border-color: #6A6969;
+	background-color: rgb(20, 175, 218);
+}
+/****************Frame********************/
+QFrame{
+	background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+
+}
+
+/****************QDialog********************/
+QDialog{
+	background-color: rgb(25, 139, 186);
+}
+
+
+/****************QLabel********************/
+QLabel{
+    border: 1px solid transparent ;
+	color: rgb(20, 72, 149);
+}
+/****************QLineEdit********************/
+QLineEdit{
+	border-radius:10px;
+	border:1px solid  #D1D1D1;
+color: rgb(20, 72, 149);
+
+}
+/****************QGroupBox********************/
+QGroupBox{
+background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+}
+/*****************QStackedWidget*******************/
+QWidget{
+
+}
+/*****************Progress bar*******************/
+QProgressBar:horizontal {
+
+    border-radius: 6px;
+    border: 1px solid #3A3939;
+    text-align: center;
+    padding: 1px;
+	background-color: rgb(209, 209, 209);
+}
+
+QProgressBar::chunk:horizontal {
+    border-radius: 6px;
+	background-color: rgb(142, 191, 46);
+}
+
+
+
+
+
+
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="Images.qrc">
+         <normaloff>:/new/prefix1/poubelle (1).png</normaloff>:/new/prefix1/poubelle (1).png</iconset>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="idsupprim">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="placeholderText">
+        <string>Saisir l'ID</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="geometry">
+       <rect>
+        <x>1110</x>
+        <y>150</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+/****************Buttons**********************/
+QPushButton{
+	color: rgb(25, 139, 186);
+	border-radius:10px;
+	background-color: rgb(255, 255, 255);
+	 border-width: 2px;
+	font: 75 10pt &quot;Times New Roman&quot;;
+	border:1px solid rgb(209, 209, 209);
+}
+
+
+QPushButton:hover {
+	border:1px solid rgb(25, 139, 186);
+}
+
+QPushButton:pressed {
+	color: rgb(255, 255, 255);
+	background-color: rgb(20, 175, 218);
+
+}
+
+QPushButton:checked{
+    border-color: #6A6969;
+	background-color: rgb(20, 175, 218);
+}
+/****************Frame********************/
+QFrame{
+	background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+
+}
+
+/****************QDialog********************/
+QDialog{
+	background-color: rgb(25, 139, 186);
+}
+
+
+/****************QLabel********************/
+QLabel{
+    border: 1px solid transparent ;
+	color: rgb(20, 72, 149);
+}
+/****************QLineEdit********************/
+QLineEdit{
+	border-radius:10px;
+	border:1px solid  #D1D1D1;
+color: rgb(20, 72, 149);
+
+}
+/****************QGroupBox********************/
+QGroupBox{
+background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+}
+/*****************QStackedWidget*******************/
+QWidget{
+
+}
+/*****************Progress bar*******************/
+QProgressBar:horizontal {
+
+    border-radius: 6px;
+    border: 1px solid #3A3939;
+    text-align: center;
+    padding: 1px;
+	background-color: rgb(209, 209, 209);
+}
+
+QProgressBar::chunk:horizontal {
+    border-radius: 6px;
+	background-color: rgb(142, 191, 46);
+}
+
+
+
+
+
+
+</string>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="text">
+       <string>Modifier</string>
+      </property>
+      <property name="icon">
+       <iconset resource="Images.qrc">
+        <normaloff>:/new/prefix1/crayon.png</normaloff>:/new/prefix1/crayon.png</iconset>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2"/>
+    <widget class="QWidget" name="page_5"/>
+   </widget>
+   <widget class="QPushButton" name="modif_5">
+    <property name="geometry">
+     <rect>
+      <x>1160</x>
+      <y>20</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+/****************Buttons**********************/
+QPushButton{
+	color: rgb(25, 139, 186);
+	border-radius:10px;
+	background-color: rgb(255, 255, 255);
+	 border-width: 2px;
+	font: 75 10pt &quot;Times New Roman&quot;;
+	border:1px solid rgb(209, 209, 209);
+}
+
+
+QPushButton:hover {
+	border:1px solid rgb(25, 139, 186);
+}
+
+QPushButton:pressed {
+	color: rgb(255, 255, 255);
+	background-color: rgb(20, 175, 218);
+
+}
+
+QPushButton:checked{
+    border-color: #6A6969;
+	background-color: rgb(20, 175, 218);
+}
+/****************Frame********************/
+QFrame{
+	background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+
+}
+
+/****************QDialog********************/
+QDialog{
+	background-color: rgb(25, 139, 186);
+}
+
+
+/****************QLabel********************/
+QLabel{
+    border: 1px solid transparent ;
+	color: rgb(20, 72, 149);
+}
+/****************QLineEdit********************/
+QLineEdit{
+	border-radius:10px;
+	border:1px solid  #D1D1D1;
+color: rgb(20, 72, 149);
+
+}
+/****************QGroupBox********************/
+QGroupBox{
+background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+}
+/*****************QStackedWidget*******************/
+QWidget{
+
+}
+/*****************Progress bar*******************/
+QProgressBar:horizontal {
+
+    border-radius: 6px;
+    border: 1px solid #3A3939;
+    text-align: center;
+    padding: 1px;
+	background-color: rgb(209, 209, 209);
+}
+
+QProgressBar::chunk:horizontal {
+    border-radius: 6px;
+	background-color: rgb(142, 191, 46);
+}
+
+
+
+
+
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="Images.qrc">
+      <normaloff>:/new/prefix1/sortir.png</normaloff>:/new/prefix1/sortir.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="modif_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+/****************Buttons**********************/
+QPushButton{
+	color: rgb(25, 139, 186);
+	border-radius:10px;
+	background-color: rgb(255, 255, 255);
+	 border-width: 2px;
+	font: 75 10pt &quot;Times New Roman&quot;;
+	border:1px solid rgb(209, 209, 209);
+}
+
+
+QPushButton:hover {
+	border:1px solid rgb(25, 139, 186);
+}
+
+QPushButton:pressed {
+	color: rgb(255, 255, 255);
+	background-color: rgb(20, 175, 218);
+
+}
+
+QPushButton:checked{
+    border-color: #6A6969;
+	background-color: rgb(20, 175, 218);
+}
+/****************Frame********************/
+QFrame{
+	background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+
+}
+
+/****************QDialog********************/
+QDialog{
+	background-color: rgb(25, 139, 186);
+}
+
+
+/****************QLabel********************/
+QLabel{
+    border: 1px solid transparent ;
+	color: rgb(20, 72, 149);
+}
+/****************QLineEdit********************/
+QLineEdit{
+	border-radius:10px;
+	border:1px solid  #D1D1D1;
+color: rgb(20, 72, 149);
+
+}
+/****************QGroupBox********************/
+QGroupBox{
+background-color: white ;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+	font: 75 10pt &quot;Times New Roman&quot;;
+}
+/*****************QStackedWidget*******************/
+QWidget{
+
+}
+/*****************Progress bar*******************/
+QProgressBar:horizontal {
+
+    border-radius: 6px;
+    border: 1px solid #3A3939;
+    text-align: center;
+    padding: 1px;
+	background-color: rgb(209, 209, 209);
+}
+
+QProgressBar::chunk:horizontal {
+    border-radius: 6px;
+	background-color: rgb(142, 191, 46);
+}
+
+
+
+
+
+
+</string>
+    </property>
+    <property name="text">
+     <string>Home</string>
+    </property>
+    <property name="icon">
+     <iconset resource="Images.qrc">
+      <normaloff>:/new/prefix1/maison.png</normaloff>:/new/prefix1/maison.png</iconset>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1330</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="Images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
